@@ -51,7 +51,7 @@ endif
 if &loadplugins
     silent! source $VIMHOME/bundles.vim
 endif
-
+colorscheme molokai
 " 为特定的文件类型载入相应的插件
 filetype plugin indent on
 
@@ -90,11 +90,11 @@ set cursorline
 " ==================== 命令行 ==================== {{{
 
 " 命令行列出所有的补全可能性, 配合 <C-N>, <C-P> 使用
-set wildmode=longest,list
-cnoremap <C-A> <Home>
-cnoremap <C-F> <Right>
-cnoremap <C-B> <Left>
-cnoremap <C-D> <Del>
+"set wildmode=longest,list
+"cnoremap <C-A> <Home>
+"cnoremap <C-F> <Right>
+"cnoremap <C-B> <Left>
+"cnoremap <C-D> <Del>
 
 " }}}
 " ==================== 缩进与折叠 ==================== {{{
@@ -221,8 +221,8 @@ set switchbuf=useopen
 " 如果重新定义了 <TAB>, CTRL-I 也会跟着被重新定义. 为了解放 <TAB>
 " 并且保证跳转表的操作是完整的，于是我们：
 " 使用 C-P/C-N 接收跳转表的操作
-nnoremap <C-P> <C-O>
-nnoremap <C-N> <C-I>
+"nnoremap <C-P> <C-O>
+"nnoremap <C-N> <C-I>
 
 " 切换 buffer, 也可以映射为 gb/gB 类似 tab 的 gt/gT 操作
 nnoremap <expr> <TAB> &buftype == "" ? ":bn\<CR>" : ''
@@ -341,5 +341,12 @@ endif
 " ==================== 加载本地配置 ==================== {{{
 
 silent! source $VIMHOME/local/local.vimrc
-colorscheme molokai
 " }}}
+"vimrc语法测试与练习
+"let i =1
+"while i < 5
+"    echo "count is " i
+"    let i += 1
+"endwhile
+
+

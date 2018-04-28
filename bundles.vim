@@ -14,15 +14,10 @@ endif
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'jlanzarotta/bufexplorer'
-Plugin 'LujianDuan/molokai'
-
 " 主题
-"Plugin 'ueaner/molokai'
-
-" 文件浏览
-"Plugin 'scrooloose/nerdtree'
-
-
+Plugin 'LujianDuan/molokai'
+"vim-go
+Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call vundle#end()            " required
 
 " }}}
@@ -86,25 +81,3 @@ endfunction
 let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
 
-"let NERDTreeQuitOnOpen = 1 " 打开文件时关闭树
-"let NERDTreeMinimalUI  = 1 " 不显示帮助面板
-"let NERDTreeDirArrows  = 0 " 目录箭头:1显示箭头 0传统+-|号
-"let NERDTreeMouseMode  = 2 " 单击打开目录，双击打开文件
-"let NERDTreeWinSize = 25 " 窗口大小
-
-"let NERDTreeIgnore     = ['\.idea$', '\.tags$']
-
-" Open nerdtree in current dir, write our own custom function because
-" NerdTreeToggle just sucks and doesn't work for buffers
-"function! g:NerdTreeFindToggle()
-"    if g:NERDTree.IsOpen()
-"        exec 'NERDTreeClose'
-"    else
-"        exec 'NERDTreeFind'
-"    endif
-"endfunction
-
-" For toggling
-"noremap <leader>n :<C-U>call g:NerdTreeFindToggle()<cr>
-
-" }}}
