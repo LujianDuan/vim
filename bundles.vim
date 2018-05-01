@@ -18,6 +18,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'LujianDuan/molokai'
 "vim-go
 Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plugin 'SirVer/ultisnips'
 call vundle#end()            " required
 
 " }}}
@@ -32,7 +33,17 @@ let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+inoremap <expr><C-Space>  pumvisible() ? "\<C-n>" : "\<C-Space>"
 
+" YCM settings
+let g:ycm_key_list_select_completion = ['', '']
+let g:ycm_key_list_previous_completion = ['']
+let g:ycm_key_invoke_completion = '<C-Space>'
+
+" UltiSnips setting
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
             \ 'default' : '',

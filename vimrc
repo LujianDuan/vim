@@ -124,7 +124,7 @@ nnoremap <silent> <space> @=(foldlevel('.')?'za':"\<space>")<CR>
 " vim 内部编码(buffer,菜单文本[gvim],消息文本等), :help ++enc
 set encoding=utf-8
 " utf-8 编码, 去除 BOM
-set fileencoding=utf-8 nobomb
+set fileencodings=utf-8,ucs-bom,cp936,gb18030,big5,euc-jp,euc-kr,latin1  nobomb
 " 换行符格式, Line Endings, :help ++ff
 set fileformats=unix,dos,mac
 " 不生成备份文件, 和 .swp 文件
