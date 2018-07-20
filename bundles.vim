@@ -11,6 +11,8 @@ if has('lua')
     " 自动完成
     Plugin 'shougo/neocomplete.vim'
 endif
+"python-mode
+Plugin 'python-mode/python-mode', { 'branch': 'develop' }
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'jlanzarotta/bufexplorer'
