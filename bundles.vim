@@ -11,8 +11,6 @@ if has('lua')
     " 自动完成
     Plugin 'shougo/neocomplete.vim'
 endif
-"python-mode
-Plugin 'python-mode/python-mode', { 'branch': 'develop' }
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'jlanzarotta/bufexplorer'
@@ -22,8 +20,19 @@ Plugin 'LujianDuan/molokai'
 Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call vundle#end()            " required
 
+" Pathogen load
+filetype off
+
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
+syntax on
+
+
 " }}}
 " ==================== neocomplete ==================== {{{
+let g:pymode_python = 'python3'
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
