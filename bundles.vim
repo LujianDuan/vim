@@ -14,6 +14,7 @@ endif
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'mattn/emmet-vim'
 " 主题
 Plugin 'LujianDuan/molokai'
 "vim-go
